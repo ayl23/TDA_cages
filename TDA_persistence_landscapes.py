@@ -56,7 +56,7 @@ for refcode in refcodes:
             print('Something went wrong with', refcode)
             results[refcode]='Error'
         # Calculate landscapes, L1 for Betti 1 and L2 for Betti 2
-        LS = gd.representations.Landscape(resolution=10)
+        LS = gd.representations.Landscape(resolution=100) # MODIFY RESOLUTION AS DESIRED
         print('LS calculated')
         L1 = LS.fit_transform([Rips_simplex_tree_sample.persistence_intervals_in_dimension(1)])
         print('L1 calculated')

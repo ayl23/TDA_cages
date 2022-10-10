@@ -72,6 +72,7 @@ dendrogram = dendrogram(Z)
 max_d = 0.06 # MODIFY THIS ACCORDING TO DENDROGRAM
 # Cutting the dendrogram at max_d
 plt.axhline(y=max_d, c='k')
+plt.savefig('dendogram plot.png')
 
 # See number of clusters k
 k=3 # MODIFY THIS ACCORDING TO NUMBER OF CLUSTERS OBSERVED ON DENDROGRAM

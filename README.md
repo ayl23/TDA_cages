@@ -3,8 +3,15 @@
 This repository contains the scripts and datasets used and presented in "Identifying porous cages subsets in the Cambridge Structural Database using topological data analysis" by Aurelia Li, Rocio Bueno-Perez and David Fairen-Jimenez, Adsorption and Advanced Materials Group (aam.ceb.cam.ac.uk), led by David Fairen-Jimenez from the Department of Chemical Engineering and Biotechnology, University of Cambridge.
 
 ## List of datasets
-- MOC_2019.gcd: list of MOCs identified in the CSD with updates up to November 2019.
-- OC_2019.gcd: list of OCs identified in the CSD with updates up to November 2019.
+- The __Latest datasets__ folder contains:
+    - **_MOC_Mar2022.gcd_**: list of MOCs identified in the CSD with updates up to March 2022.
+    - **_OC_Mar2022.gcd_**: list of OCs identified in the CSD with updates up to March 2022.
+- The __Previous datasets__ folder contains the first lists of structures obtained during the writing and peer-review process of the paper:
+    - **_MOC_Nov2019.gcd_**: list of MOCs identified in the CSD with updates up to November 2019.
+    - **_OC_Nov2019.gcd_**: list of OCs identified in the CSD with updates up to November 2019.
+    - **_MOC_update_Nov2019-Mar2022.gcd_**: list of MOCs identified in the CSD between November 2019 and March 2022.
+    - **_OC_update_Nov2019-Mar2022.gcd_**: list of MOCs identified in the CSD between November 2019 and March 2022.
+    - **_CARBOXYLATE_Mar2022.gcd_**: list of carboxylate-based structures in the CSD with updates up to March 2022. 
 
 ## Scripts:
 - __TDA_structural_data_preparation.py__: given a list of refcodes (a GCD list), this script 

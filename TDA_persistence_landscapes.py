@@ -8,6 +8,7 @@
 Step 2 - Compute the persistent landscapes
 
 Input: - a GCD list e.g. the GCD list output by TDA_structural_data_preparation.py
+       - the .csv files containing the structures coordinates, also output from TDA_structural_data_preparation.py
 Output: - an .npy file for each structure, where the persistence data is stored
         - a results.csv file containing the persistence calculated for all the structures in a human-readable format. 
         Each row corresponds to a structure, and the persistence data is recorded in the format (Betti number, (birth, death))

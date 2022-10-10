@@ -1,7 +1,8 @@
 # Created by Aurelia Li, Adsorption and Advanced Materials Group (aam.ceb.cam.ac.uk),
 # led by David Fairen-Jimenez from the Department of Chemical Engineering and
 # Biotechnology, University of Cambridge,
-# with the help of Seth Wiggin from the Cambridge Crystallographic Data Centre, Cambridge.
+# Thank you to Seth Wiggin from the Cambridge Crystallographic Data Centre, Cambridge,
+# for testing and for the useful feedback.
 
 """
 Step 2 - Compute the persistent landscapes

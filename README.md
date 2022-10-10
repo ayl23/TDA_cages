@@ -13,6 +13,8 @@ This repository contains the scripts and datasets used and presented in "Identif
     - **_OC_update_Nov2019-Mar2022.gcd_**: list of MOCs identified in the CSD between November 2019 and March 2022.
     - **_CARBOXYLATE_Mar2022.gcd_**: list of carboxylate-based structures in the CSD with updates up to March 2022. 
 
+_Disclaimer_: these structures were programmatically found in the CSD, and were not all visually checked. Please let us know if any structure shouldn't be included and if other structures should be.
+
 ## Scripts:
 - __TDA_structural_data_preparation.py__: given a list of refcodes (a GCD list), this script 
     - removes any guest molecules and solvents, 

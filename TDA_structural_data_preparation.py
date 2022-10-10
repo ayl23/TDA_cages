@@ -25,6 +25,7 @@ To run this script directly in the CSD Python API command shell:
 import ccdc.molecule
 from ccdc.io import EntryReader, CrystalWriter
 import csv
+import os
 
 # Read list of structures identified with ConQuest
 # List of structures are saved as GCD (.gcd) text files in ConQuest
@@ -34,7 +35,7 @@ MOF_list_entries = EntryReader(path_to_GCD)
 
 # To keep track of numbers
 potential_cage_list = []
-total_structures = 0
+total_structures = len(MOF_list_entries)
 potential_structures = 0
 
 # This loops checks that the component that could be potentially a cage has organic parts and is not fully linear
@@ -62,7 +63,7 @@ for entry in MOF_list_entries:
         print("This is the", potential_structures, "th potential structure out of", total_structures)
         print("This structure is", refcode)
         entry.crystal.molecule = cage
-        # Write out the corresponding cif
+        # Write out the corresponding cif for checking (not necessary)
         with CrystalWriter(refcode+'.cif') as cryst_writer:
             cryst_writer.write(entry.crystal)
         # Write out the final list of structures
@@ -74,7 +75,7 @@ for entry in MOF_list_entries:
 ## Part Ib - extract the fractional coordinates from the CIFs
 
 # Specify the directory we want the csv files to be written to
-directory = 'C:/Users/HP/Desktop/TDA_git'# MODIFY THIS
+directory = 'URPATH'# MODIFY THIS
 
 # Function to remove parenthesis in cifs
 def remove_parenthesis(list_of_strings):
@@ -98,8 +99,9 @@ for filename in os.listdir(directory):
         cif_reader = EntryReader(filename)
         for cif in cif_reader:
             cif = cif_reader[0] # need to specify which datablock in the CIF we're reading
-            if cif.has_3d_structure:
-                try:
+            try:
+                if cif.has_3d_structure:
+                    print('Extracting coordinates for ', filename)
                     atom_x_coordinate = remove_parenthesis(cif.attributes['_atom_site_fract_x'])
                     atom_y_coordinate = remove_parenthesis(cif.attributes['_atom_site_fract_y'])
                     atom_z_coordinate = remove_parenthesis(cif.attributes['_atom_site_fract_z'])
@@ -108,5 +110,5 @@ for filename in os.listdir(directory):
                         writer = csv.writer(f)
                         for row in rows:
                             writer.writerow(row)
-                except:
-                    print('Error when extracting coordinates from', filename)
+            except RuntimeError:
+                print('Error when extracting coordinates from', filename)

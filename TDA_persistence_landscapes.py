@@ -1,6 +1,7 @@
 # Created by Aurelia Li, Adsorption and Advanced Materials Group (aam.ceb.cam.ac.uk),
 # led by David Fairen-Jimenez from the Department of Chemical Engineering and
-# Biotechnology, University of Cambridge.
+# Biotechnology, University of Cambridge,
+# with the help of Seth Wiggin from the Cambridge Crystallographic Data Centre, Cambridge.
 
 """
 Step 2 - Compute the persistent landscapes
@@ -55,6 +56,7 @@ for refcode in refcodes:
         except:
             print('Something went wrong with', refcode)
             results[refcode]='Error'
+            times[refcode]='Error'
         # Calculate landscapes, L1 for Betti 1 and L2 for Betti 2
         LS = gd.representations.Landscape(resolution=100) # MODIFY RESOLUTION AS DESIRED
         print('LS calculated')
@@ -71,9 +73,9 @@ for refcode in refcodes:
         results[refcode]='xyz missing'
         times[refcode]='NA'
         print('xyz file not found for', refcode)
-    w = csv.writer(open("results.csv", "a"))
+    w = csv.writer(open("results.csv", "a", newline = ''))
     w.writerow([refcode, results[refcode]])
-    t= csv.writer(open("times.csv", "a"))
+    t= csv.writer(open("times.csv", "a", newline = ''))
     t.writerow([refcode, times[refcode]])
     # landscape is saved as an NPY
     with open(refcode+".npy", 'wb') as f:

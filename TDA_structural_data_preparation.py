@@ -1,6 +1,8 @@
 # Created by Aurelia Li, Adsorption and Advanced Materials Group (aam.ceb.cam.ac.uk),
 # led by David Fairen-Jimenez from the Department of Chemical Engineering and
 # Biotechnology, University of Cambridge.
+# Thank you to Seth Wiggin from the Cambridge Crystallographic Data Centre, Cambridge,
+# for testing and for the useful feedback.
 
 """
 Step 1 - extract the fractional coordinates of the potential cages from the CSD

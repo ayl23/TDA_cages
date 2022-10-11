@@ -13,6 +13,7 @@ This repository contains the scripts and datasets used and presented in "Identif
     - **_OC_update_Nov2019-Mar2022.gcd_**: list of MOCs identified in the CSD between November 2019 and March 2022.
     - **_CARBOXYLATE_Mar2022.gcd_**: list of carboxylate-based structures in the CSD with updates up to March 2022. 
     - Lists of MOCs and OCs containing hydrogen-related disorder, identified using a script published at [DOI: 10.1039/D0SC01297A.](https://pubs.rsc.org/en/content/articlehtml/2020/sc/d0sc01297a#:~:text=The%20target%20MOF%20families%20are,structures%20containing%20Cu%E2%80%93Cu%20paddlewheels.)
+    - Lists of MOCs and OCs (up to November 2019) that have undergone SQUEEZE.
 
 _Disclaimer_: these structures were programmatically found in the CSD, and were not all visually checked. Please let us know if any structure shouldn't be included and if other structures should be.
 
